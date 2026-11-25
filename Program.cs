@@ -111,6 +111,6 @@
 
     static void Main(string[] args)
     {
-        Matrix_Print(MatrixRead());
+        Matrix_Print(Matrix_Read());
     }
 }
