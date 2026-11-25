@@ -2,7 +2,7 @@
 {
     // Matrix de leitura
     // Marcelo Carreta
-    static public double[,] MatrixRead()
+    static public double[,] Matrix_Read()
     {
      
     
@@ -21,7 +21,7 @@
     {
         for (int j = 0; j < column; j++)
             {
-            Console.WriteLine($"Insira o valor do elemento da linha {i+1} e da coluna {j+1} : "); 
+            Console.WriteLine($"Insira o valor do elemento da linha {i+1} coluna {j+1} : "); 
               r[i, j] = Convert.ToDouble(Console.ReadLine());
             }
         
@@ -90,9 +90,16 @@
 
     //Imprime uma matriz de forma legível; usada para testar todas as outras funções. 
     // Eltino Domingos
-    static public void Matrix_Print()
+    static public void Matrix_Print(double[,] m)
     {
-        
+        // Console.WriteLine(text);
+        for (int i = 0; i < m.GetLength(0); i++)
+        {
+        for (int j = 0; j < m.GetLength(1); j++)
+        {
+            Console.Write($"{m[i,j]},");
+        }
+       }
     }
 
     //Determinante de uma matriz 2x2; é a base do Matrix_Inverse_2x2 e do Matrix_Determinant_3x3.
@@ -104,6 +111,6 @@
 
     static void Main(string[] args)
     {
-        MatrixRead();
+        Matrix_Print(MatrixRead());
     }
 }
