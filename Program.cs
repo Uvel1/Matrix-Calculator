@@ -1,4 +1,4 @@
-﻿public class program
+﻿public class Program
 {
     // Matrix de leitura
     // Marcelo Carreta
