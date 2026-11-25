@@ -2,9 +2,36 @@
 {
     // Matrix de leitura
     // Marcelo Carreta
-    static public void MatrixRead()
+    static public double[,] MatrixRead()
     {
+     
+    
+    double[,] r;
+
+    //Pedir dim do vetor
+    Console.WriteLine("Indique o número de linhas: ");
+    int line = Convert.ToInt32(Console.ReadLine());
+    
+    Console.WriteLine("Indique o número de colunas: ");
+    int column = Convert.ToInt32(Console.ReadLine());
+
+    r = new double[line, column];
+    
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < column; j++)
+            {
+            Console.WriteLine($"Insira o valor do elemento da linha {i+1} e da coluna {j+1} : "); 
+              r[i, j] = Convert.ToDouble(Console.ReadLine());
+            }
         
+    }
+    
+    return r;
+
+
+
+
     }
 
     //Multiplicação por um escalar
@@ -75,8 +102,8 @@
         
     }
 
-    static void main(string[] args)
+    static void Main(string[] args)
     {
-        
+        MatrixRead();
     }
 }
