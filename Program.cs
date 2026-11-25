@@ -36,11 +36,21 @@
 
     //Multiplicação por um escalar
     // Marcelo Carreta
-    static public void Matrix_Scalar_Mult()
+    static public double[,] Matrix_Scalar_Mult(int a , double[,] m)
     {
+       double[,] r;
+       r = new double[m.GetLength(0), m.GetLength(1)];
+        for (int i = 0; i < m.GetLength(0); i++)
+    {
+        for (int j = 0; j < m.GetLength(1); j++)
+            {
+                r[i, j] = a * m[i, j];
+            }
         
     }
-
+    return r;
+    }
+  
     //Soma de matrizes
     // Jaime Domingos
     static public void Matrix_Add()
@@ -111,6 +121,7 @@
 
     static void Main(string[] args)
     {
-        Matrix_Print(Matrix_Read());
+        // Matrix_Print(Matrix_Read());
+        Matrix_Print(Matrix_Scalar_Mult(2, Matrix_Read()));
     }
 }
