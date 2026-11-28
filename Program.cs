@@ -107,14 +107,16 @@
 
     // Determinante de uma matriz 2x2; é a base do Matrix_Inverse_2x2 e do Matrix_Determinant_3x3.
     // Uveli Afonso
-    static public void Matrix_Determinant_2x2()
+    static public double Matrix_Determinant_2x2(double[,] m)
     {
+        return m[0, 0] * m[1, 1] - m[0, 1] * m[1, 0];
     }
 
     static void Main(string[] args)
     {
         // Matrix_Print(Matrix_Read());
         // Matrix_Print(Matrix_Scalar_Mult(2, Matrix_Read()));
-        Console.WriteLine($"A Determinante da matriz 3x3 é: {Matrix_Determinant_3x3(Matrix_Read())}");
+        //Console.WriteLine($"A Determinante da matriz 3x3 é: {Matrix_Determinant_3x3(Matrix_Read())}");
+        //Console.WriteLine($"{Matrix_Determinant_2x2(Matrix_Read())}");
     }
 }
